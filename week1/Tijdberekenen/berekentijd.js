@@ -6,8 +6,8 @@ actieButton.addEventListener('click', actions);
 const verstrekenTijd = document.getElementById('verstrekentijd');
 const timeList = document.getElementById('list');
 
-var startTime;
-var stopTime;
+let startTime;
+let stopTime;
 let myTime = [];
 
 //
@@ -32,7 +32,7 @@ function storeTime(tijd) {
 
 //
 function actions() {
-    var tijd =  Date.now();
+    let tijd =  Date.now();
 
     storeTime(tijd);
     if (actieButton.getAttribute('value') === 'stop') {
@@ -48,7 +48,7 @@ function actions() {
 
 // Deze functie doet:
 function calculateTime(start, stop) {
-    var verschil = stop - start;
+    let verschil = stop - start;
     return verschil;
 }
 
