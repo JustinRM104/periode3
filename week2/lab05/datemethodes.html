@@ -4,7 +4,7 @@
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <title>Datemethodes</title>
    <!--dit script: werkt met het Date Object 
-   auteur: typ je eigen naam hier
+   auteur: Justin 
     -->
 
 <!--
@@ -22,17 +22,22 @@
 <body>
     <h2>datemethodes</h2>
    <script type="text/javascript">
-       var vandaag = new Date();
+       let vandaag = new Date();
        document.write("<br />Vandaag is: " + vandaag);
 
-       var maanden = new Array('januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december');
-       var weekdag = new Array('zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag')
+       let maanden = new Array('januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december');
+       let weekdag = new Array('zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag')
 
        document.write("<br />Vandaag is: "
            + weekdag[vandaag.getDay()] +
            ' ' + vandaag.getDate() +
            ' ' + maanden[vandaag.getMonth()] +
-           ' ' + vandaag.getFullYear());
+           ' ' + vandaag.getFullYear() +
+           '<br> Tijd vanaf 1970: ' + vandaag.getTime() +
+           '<br> Min van het uur 0 - 59 ' + vandaag.getMinutes() +
+           '<br> Tijd in uren 0 - 23: ' + vandaag.getHours() +
+           '<br> Tijd in miliseconden 0 - 999: ' + vandaag.getMilliseconds() +
+           '<br> Volle jaar: ' + vandaag.getFullYear());
 
    	</script>
 </body>
